@@ -19,25 +19,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">SoundGod.com</a>
+      <a class="navbar-brand">SoundGod.com</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost:8080/ecomm/soundofmusic.html">Home</a></li>
+        <li class="active"><a href="soundofmusic">Home</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Guitars <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#"></a></li>
-            <li><a href="#">Electric Guitar</a></li>
-            <li><a href="#">Acoustic Guitar</a></li>
+            <li><a href="Products.html">Electric Guitar</a></li>
+            <li><a href="Products.html">Acoustic Guitar</a></li>
           </ul>
         </li>
-        <li><a href="#">Amplifiers</a></li>
-        <li><a href="#">Accessories</a></li>
+        <li><a href="Products">Amplifiers</a></li>
+        <li><a href="Products">Accessories</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-
-        <li><a href="http://localhost:8080/ecomm/signup.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
@@ -46,31 +45,40 @@
 	<form tag="Create Logon">
 		<div align="Justify">
 		<p>
-			Username *: <input type="username" name="username" />
+		
+			Username *:
+			 <input type="username" name="username" />
 		</p>
 		<p> 
-			Password *: <input type="password" name="pwd" />
+			Password *:
+			 <input type="password" name="pwd" />
  		</p>
  		<p>	
-			Surname *: <input type="surname" name="surname" />
+			Surname *: 
+			<input type="surname" name="surname" />
 			</p> 
 			<p>
-			Other Names *: <input type="other names" name="names" />
+			Other Names *: 
+			<input type="other names" name="names" />
  		</p>
  		<p>
-			Date of Birth *: <input type="date of birth" name="dob" />
+			Date of Birth *:
+			 <input type="date of birth" name="dob" />
  		</p>
  		<p>
-			Email *: <input type="email" name="email" />
+			Email *: 
+			<input type="email" name="email" />
 			</p>
  		<p>
 			Telephone: <input type="telephone" name="tel" />
  			</p>
  		<p>
-			Address *: <input type="address" name="add" />
+			Address *:
+			 <input type="address" name="add" />
  			</p>
  		<p>	
-			Post Code *: <input type="postcode" name="ptc" />
+			Post Code *:
+			 <input type="postcode" name="ptc" />
  		</p>
 
 		<div class="container">

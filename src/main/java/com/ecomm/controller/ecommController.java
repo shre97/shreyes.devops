@@ -1,7 +1,10 @@
 package com.ecomm.controller;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ecommController {
@@ -10,4 +13,71 @@ public String ecomm()
 { 
 	return "soundofmusic";
 }
+
+@RequestMapping("/Products")
+public String product()
+{ 
+	return "Products";
+}
+@RequestMapping("/login")
+public String signup()
+{ 
+	return "login";
+}
+
+@RequestMapping("/signin")
+public String signin()
+{ 
+	return "signin";
+}
+
+@RequestMapping("/bp")
+public String bp()
+{ 
+	return "bp";
+}
+@RequestMapping("/soundofmusic")
+public String home()
+{ 
+	return "soundofmusic";
+}
+
+@RequestMapping("/allproducts")
+public ModelAndView allproducts()
+	{ 
+		ModelAndView mav= new ModelAndView();
+		
+		JSONArray jsonarr = new JSONArray();
+		
+		JSONObject json;
+		
+		json = new JSONObject();
+		json.put("Name","Ibanze guitar");
+		json.put("Price","25000");
+		json.put("Image","resources\\img\\86132446.jpg");
+		jsonarr.add(json);
+		
+		json = new JSONObject();
+		json.put("Name","Guitar Capo");
+		json.put("Price","600");
+		json.put("Image","resources\\img\\Guitar_Capo_1a_1024x1024.jpg");
+		jsonarr.add(json);
+		
+		json = new JSONObject();
+		json.put("Name","Electric Guitar");
+		json.put("Price","20000");
+		json.put("Image","resources\\img\\fender-american-standard-stratocaster-electric-guitar-ocean-blue-metallic-800x272.jpg");
+		jsonarr.add(json);
+		
+		json = new JSONObject();
+		json.put("Name","Guitar Set");
+		json.put("Price","40000");
+		json.put("Image","resources\\img\\fender-stop-dreaming-start-playing.png");
+		jsonarr.add(json);
+		System.out.println(jsonarr);
+		
+		mav.addObject("JSONData", jsonarr.toString());
+		
+		return mav;
+		 }
 }
