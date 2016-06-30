@@ -2,23 +2,31 @@ package com.ecomm.controller;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.ecomm.UserModel.UserServices;
+import com.niit.ecomm.model.ProductServices;
+import com.niit.ecomm.model.Productdao;
+
 @Controller
 public class ecommController {
-@RequestMapping("/")
-public String ecomm()
-{ 
-	return "soundofmusic";
-}
 
-@RequestMapping("/Products")
-public String product()
-{ 
-	return "Products";
-}
+	@Autowired
+	//ProductServices ps;
+	//UserServices us;
+	@RequestMapping("/")
+	public String ecomm()
+	{ 
+		return "soundofmusic";
+	}
+	@RequestMapping("/Products")
+    public String product()
+    { 
+	   return "Products";
+    }
 @RequestMapping("/login")
 public String signup()
 { 
