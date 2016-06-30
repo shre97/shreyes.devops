@@ -15,7 +15,7 @@ import com.niit.ecomm.model.Productdao;
 public class ecommController {
 
 	@Autowired
-	//ProductServices ps;
+	ProductServices ps;
 	//UserServices us;
 	@RequestMapping("/")
 	public String ecomm()
