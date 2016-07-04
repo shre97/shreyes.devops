@@ -11,13 +11,28 @@ import javax.persistence.Transient;
 public class User {
 	
 	@Id @GeneratedValue(strategy= GenerationType.AUTO)
+	private int Id;
+    public int getId() {
+		return Id;
+	}
 
-	
+	public void setId(int id) {
+		Id = id;
+	}
+
 	private String Name="";
 	
+	public String getCpassword() {
+		return cpassword;
+	}
+
+	public void setCpassword(String cpassword) {
+		this.cpassword = cpassword;
+	}
+
 	private String password="";
 	
-	private String contactno="";
+	private int contactno;
 	
 	private String address="";
     
@@ -32,10 +47,8 @@ public class User {
 		Name = name;
 	}
 
-	public String getcPassword() {
-		return cpassword;
-	}
 	
+
 
 public String getPassword() {
 	return password;
@@ -45,11 +58,13 @@ public String getPassword() {
 		this.password = password;
 	}
 
-	public String getContactno() {
+	
+
+	public int getContactno() {
 		return contactno;
 	}
 
-	public void setContactno(String contactno) {
+	public void setContactno(int contactno) {
 		this.contactno = contactno;
 	}
 

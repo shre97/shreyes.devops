@@ -12,13 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.ecomm.UserModel.User;
 import com.niit.ecomm.UserModel.UserServices;
 import com.niit.ecomm.model.ProductServices;
-import com.niit.ecomm.model.Productdao;
 
 @Controller
 public class ecommController {
 
 	@Autowired
 	ProductServices ps;
+	@Autowired
 	UserServices us;
 	
 	@RequestMapping("/")
@@ -38,21 +38,21 @@ public String signup()
 }
 
 @RequestMapping(value = "/signin", method = RequestMethod.GET)
-public ModelAndView signin()
+public ModelAndView signinfo()
 { 
 	ModelAndView mav = new ModelAndView("signin");
 	mav.addObject("User",new User());
 	return mav;
 }
 
-@RequestMapping(value = "/userdetails", method = RequestMethod.POST)
+@RequestMapping(value = "/Userdetails", method = RequestMethod.POST)
   public ModelAndView userdetails(@ModelAttribute("User") User u)
   {
 	us.insert(u);
 	
 	ModelAndView mav = new ModelAndView("signin");
 	
-	mav.addObject("user", new User());
+	mav.addObject("User", new User());
 	
 	return mav;
   }
