@@ -1,6 +1,7 @@
 package com.niit.ecomm.UserModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 public class ServiceImpl implements UserServices {
 	
 	@Autowired

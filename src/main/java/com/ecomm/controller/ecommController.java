@@ -4,9 +4,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.ecomm.UserModel.User;
 import com.niit.ecomm.UserModel.UserServices;
 import com.niit.ecomm.model.ProductServices;
 import com.niit.ecomm.model.Productdao;
@@ -16,7 +19,8 @@ public class ecommController {
 
 	@Autowired
 	ProductServices ps;
-	//UserServices us;
+	UserServices us;
+	
 	@RequestMapping("/")
 	public String ecomm()
 	{ 
@@ -33,11 +37,27 @@ public String signup()
 	return "login";
 }
 
-@RequestMapping("/signin")
-public String signin()
+@RequestMapping(value = "/signin", method = RequestMethod.GET)
+public ModelAndView signin()
 { 
-	return "signin";
+	ModelAndView mav = new ModelAndView("signin");
+	mav.addObject("User",new User());
+	return mav;
 }
+
+@RequestMapping(value = "/userdetails", method = RequestMethod.POST)
+  public ModelAndView userdetails(@ModelAttribute("User") User u)
+  {
+	us.insert(u);
+	
+	ModelAndView mav = new ModelAndView("signin");
+	
+	mav.addObject("user", new User());
+	
+	return mav;
+  }
+
+
 
 @RequestMapping("/bp")
 public String bp()

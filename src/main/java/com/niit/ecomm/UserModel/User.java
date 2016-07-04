@@ -1,9 +1,11 @@
 package com.niit.ecomm.UserModel;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class User {
@@ -18,6 +20,9 @@ public class User {
 	private String contactno="";
 	
 	private String address="";
+    
+	@Transient
+	private String cpassword;
 
 	public String getName() {
 		return Name;
@@ -27,9 +32,14 @@ public class User {
 		Name = name;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getcPassword() {
+		return cpassword;
 	}
+	
+
+public String getPassword() {
+	return password;
+}
 
 	public void setPassword(String password) {
 		this.password = password;
