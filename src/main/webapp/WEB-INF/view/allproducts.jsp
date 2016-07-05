@@ -79,8 +79,8 @@
   	<tbody>
   	<tr ng-repeat="product in products |filter: searchText">
   	<td>{{product.Name}}</td>
-  	<td>{{product.Price}}</td>
-  	<td><img data-ng-src="{{product.Image}}" class="img-responsive" height="200" width="300"/></td>
+  	<td>{{product.price}}</td>
+  	<td><img data-ng-src="{{product.image}}" class="img-responsive" height="200" width="300"/></td>
  	 </tr>
  	</tbody>
   </table>

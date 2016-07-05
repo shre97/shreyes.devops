@@ -1,6 +1,6 @@
 com\niit\ecomm\model\Productdao.class
 com\niit\ecomm\UserModel\UserDao.class
-com\niit\ecomm\model\product.class
+com\niit\ecomm\model\Product.class
 com\ecomm\controller\ecommController.class
 com\niit\ecomm\model\ProductServiceImpl.class
 com\niit\ecomm\model\ProductServices.class

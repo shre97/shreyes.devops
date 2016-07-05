@@ -1,5 +1,7 @@
 package com.ecomm.controller;
 
+import java.util.List;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.ecomm.UserModel.User;
 import com.niit.ecomm.UserModel.UserServices;
+import com.niit.ecomm.model.Product;
 import com.niit.ecomm.model.ProductServices;
 
 @Controller
@@ -57,7 +60,25 @@ public ModelAndView signinfo()
 	return mav;
   }
 
+@RequestMapping(value = "/addproducts", method = RequestMethod.GET)
+public ModelAndView productinfo()
+{ 
+	ModelAndView mav = new ModelAndView("addproducts");
+	mav.addObject("Product",new Product());
+	return mav;
+}
 
+@RequestMapping(value = "/Productdetails", method = RequestMethod.POST)
+  public ModelAndView userdetails(@ModelAttribute("Product") Product p)
+  {
+	ps.insert(p);
+	
+	ModelAndView mav = new ModelAndView("addproducts");
+	
+	mav.addObject("Product", new Product());
+	
+	return mav;
+  }
 
 @RequestMapping("/bp")
 public String bp()
@@ -73,38 +94,24 @@ public String home()
 @RequestMapping("/allproducts")
 public ModelAndView allproducts()
 	{ 
+	List<Product> list = ps.list();
+	String temp ="[";
+	for(Product p:list)
+	{
+		temp+= p.toString().replaceAll("\\\\", "/")+ ",";
+	}
+	
+	if(temp.length()>1)
+ temp=temp.substring(0,temp.length()-1);
+	
+	temp+= "]";
+	System.out.println(temp);
+	
+	
 		ModelAndView mav= new ModelAndView();
 		
-		JSONArray jsonarr = new JSONArray();
-		
-		JSONObject json;
-		
-		json = new JSONObject();
-		json.put("Name","Ibanze guitar");
-		json.put("Price","25000");
-		json.put("Image","resources\\img\\86132446.jpg");
-		jsonarr.add(json);
-		
-		json = new JSONObject();
-		json.put("Name","Guitar Capo");
-		json.put("Price","600");
-		json.put("Image","resources\\img\\Guitar_Capo_1a_1024x1024.jpg");
-		jsonarr.add(json);
-		
-		json = new JSONObject();
-		json.put("Name","Electric Guitar");
-		json.put("Price","20000");
-		json.put("Image","resources\\img\\fender-american-standard-stratocaster-electric-guitar-ocean-blue-metallic-800x272.jpg");
-		jsonarr.add(json);
-		
-		json = new JSONObject();
-		json.put("Name","Guitar Set");
-		json.put("Price","40000");
-		json.put("Image","resources\\img\\fender-stop-dreaming-start-playing.png");
-		jsonarr.add(json);
-		System.out.println(jsonarr);
-		
-		mav.addObject("JSONData", jsonarr.toString());
+				
+		mav.addObject("JSONData",temp);
 		
 		return mav;
 		 }

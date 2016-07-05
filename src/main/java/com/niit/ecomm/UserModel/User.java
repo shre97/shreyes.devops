@@ -32,7 +32,7 @@ public class User {
 
 	private String password="";
 	
-	private int contactno;
+	private String contactno;
 	
 	private String address="";
     
@@ -60,11 +60,11 @@ public String getPassword() {
 
 	
 
-	public int getContactno() {
+	public String getContactno() {
 		return contactno;
 	}
 
-	public void setContactno(int contactno) {
+	public void setContactno(String contactno) {
 		this.contactno = contactno;
 	}
 
