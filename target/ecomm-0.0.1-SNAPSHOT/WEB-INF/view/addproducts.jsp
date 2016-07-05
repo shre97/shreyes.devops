@@ -9,8 +9,9 @@
 </head>
 <body>
 
-<h2>Customer Information</h2>
-<form:form method="POST" action="Productdetails" modelAttribute="product">
+
+<h2>Product Information</h2>
+<form:form method="POST" action="Productdetails" modelAttribute="Product">
    <table>
     <tr>
         <td><form:label path="Name">Product Name</form:label></td>

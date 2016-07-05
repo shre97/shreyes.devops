@@ -27,39 +27,8 @@
 <body ng-app="mymodule" background="C:\Users\SHREYES\Pictures\musical_notes_background-t22.jpg">
 </head>
 <body bgcolor="yellow">
-<h1>Soundgod</h1>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="soundofmusic"><span class="glyphicon glyphicon glyphicon-home"></span></a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Guitars <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#"></a></li>
-            <li><a href="Products.html">Electric Guitar</a></li>
-            <li><a href="Products.html">Acoustic Guitar</a></li>
-          </ul>
-        </li>
-        <li><a href="Products">Amplifiers</a></li>
-        <li><a href="Products">Accessories</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="signin"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
- <div data-ng-controller="mycontroller">
+<%@include file="head.jsp" %>
+<div data-ng-controller="mycontroller">
  
  <div cass"container">
  
@@ -79,8 +48,8 @@
   	<tbody>
   	<tr ng-repeat="product in products |filter: searchText">
   	<td>{{product.Name}}</td>
-  	<td>{{product.Price}}</td>
-  	<td><img data-ng-src="{{product.Image}}" class="img-responsive" height="200" width="300"/></td>
+  	<td>{{product.price}}</td>
+  	<td><img data-ng-src="{{product.image}}" class="img-responsive" height="200" width="300"/></td>
  	 </tr>
  	</tbody>
   </table>

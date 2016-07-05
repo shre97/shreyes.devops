@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <h2>Product Information</h2>
 <form:form method="POST" action="Productdetails" modelAttribute="Product">
    <table>

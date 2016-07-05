@@ -11,36 +11,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand">SoundGod.com</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="soundofmusic">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Guitars <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#"></a></li>
-            <li><a href="Products.html">Electric Guitar</a></li>
-            <li><a href="Products.html">Acoustic Guitar</a></li>
-          </ul>
-        </li>
-        <li><a href="Products">Amplifiers</a></li>
-        <li><a href="Products">Accessories</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="signin"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%@include file="head.jsp" %>
 <div class="container"> 
      <div class="row"> 
          <div class="col-sm-6 col-md-4 col-md-offset-4"> 

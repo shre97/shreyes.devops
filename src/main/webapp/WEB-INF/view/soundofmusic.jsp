@@ -24,7 +24,8 @@
 </style>
 </head>
 <body>
-<h1 align="Center" style="font-family:forte ;color:red;">Soundgod.com</h1>
+<%@include file="head.jsp" %>
+<!-- <h1 align="Center" style="font-family:forte ;color:red;">Soundgod.com</h1>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -50,18 +51,18 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign Up/In <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign Up/In <span class="glyphicon glyphicon-chevron-down"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#"></a></li>
             <li><a href="signin"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            <li><a href="addproducts">Add Products</a></li>  
+            <li><a href="addproducts"><span class="glyphicon glyphicon-plus"></span>Add Products</a></li>  
           </ul>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
  
