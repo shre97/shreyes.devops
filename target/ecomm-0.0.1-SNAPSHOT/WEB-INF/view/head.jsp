@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 align="Center" style="font-family:forte ;color:red;">Soundgod.com</h1>
+<h1 align="center" style="font-family:forte ;color:#c52a2a;">Soundgod.com</h1>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
