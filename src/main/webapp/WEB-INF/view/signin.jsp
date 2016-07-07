@@ -3,15 +3,40 @@
     pageEncoding="ISO-8859-1"%>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<script type="text/javascript" src="resources/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="resources/css/custom.css"> 
     <title>sign in</title>
+    <style>
+.inputForm
+{
+    -moz-border-radius:10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    -khtml-border-radius: 10px; /* KHTML */
+    border-radius: 10px; /* CSS3 */
+    behavior:url("border-radius.htc");
+}
+
+#RightColumn
+{
+    background-color:White;
+}
+</style>
 </head>
 <body>
-
-<h2>Customer Information</h2>
+<%@include file="head.jsp" %>
+<div class="container"> 
+     <div class="row"> 
+         <div class="col-sm-6 col-md-4 col-md-offset-4"> 
+<h1 align="Center" style="font-family:forte ;color:#1A5880;">Signup To Continue</h1>
 <form:form method="POST" action="Userdetails" modelAttribute="User">
    <table>
     <tr>
-        <td><form:label path="name">Name</form:label></td>
+    <div id="RightColumn">
+        <td><form:label  path="name">Name</form:label></td>
         <td><form:input path="name" /></td>
     </tr>
     <tr>
@@ -35,8 +60,13 @@
             <input type="submit" value="Submit"/>
         </td>
     </tr>
+    </div>
 </table>  
+ 
 </form:form>
+      </div> 
+   </div> 
+ </div> 
 </body>
 </html>
 <%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
