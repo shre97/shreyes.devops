@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-public class RoleSecurityServiceImpl {
+public class RoleSecurityServiceImpl implements RoleSecurityServices {
 	
 	@Autowired
 	RoleSecurityDao rdao;
@@ -16,6 +16,11 @@ public class RoleSecurityServiceImpl {
 		// TODO Auto-generated method stub
 		
 		rdao.insert(r);
+	}
+
+	public void delete(RoleSecurity rd) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

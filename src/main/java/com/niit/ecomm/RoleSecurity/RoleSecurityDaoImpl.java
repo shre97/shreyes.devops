@@ -11,9 +11,7 @@ public class RoleSecurityDaoImpl implements RoleSecurityDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public RoleSecurityDaoImpl(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
+	
    @Transactional
 	public void insert(RoleSecurity r) {
 		// TODO Auto-generated method stub
@@ -31,4 +29,5 @@ public class RoleSecurityDaoImpl implements RoleSecurityDao {
 		// TODO Auto-generated method stub
 		
 	}
+	
 }

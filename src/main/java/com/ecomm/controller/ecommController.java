@@ -29,6 +29,12 @@ public class ecommController {
 	{ 
 		return "soundofmusic";
 	}
+	@RequestMapping("/index")
+	public String ecomm1()
+	{ 
+		return "soundofmusic";
+	}
+	
 	@RequestMapping("/Products")
     public String product()
     { 
