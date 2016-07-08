@@ -21,7 +21,7 @@
                      alt=""> 
                  <form class="form-signin"> 
                  <p>
-                 <input type="text" class="form-control" placeholder="Email" required autofocus>
+                 <input type="text" class="form-control" placeholder="Username" required autofocus>
                  </p>
                  <p> 
                  <input type="password" class="form-control" placeholder="Password" required>

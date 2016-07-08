@@ -34,11 +34,24 @@ public class ecommController {
     { 
 	   return "Products";
     }
-@RequestMapping("/login")
-public String signup()
-{ 
-	return "login";
-}
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String loginurl1() {
+	   return "login";
+
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String loginurl() {
+	   return "login";
+
+	}
+
+	@RequestMapping(value = "/logincheck", method = RequestMethod.GET)
+	public String logincheck() {
+
+	   return "login";
+
+	}
 
 @RequestMapping(value = "/signin", method = RequestMethod.GET)
 public ModelAndView signinfo()

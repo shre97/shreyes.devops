@@ -35,7 +35,6 @@
 <form:form method="POST" action="Userdetails" modelAttribute="User">
    <table>
     <tr>
-    <div id="RightColumn">
         <td><form:label  path="name">Name</form:label></td>
         <td><form:input path="name" /></td>
     </tr>
@@ -58,15 +57,21 @@
     <tr>
         <td colspan="2">
             <input type="submit" value="Submit"/>
+            <div class="container">
+
+</div>
         </td>
     </tr>
-    </div>
+    
 </table>  
  
 </form:form>
       </div> 
    </div> 
  </div> 
+ <div class="container">
+  <a href="http://localhost:8080/ecomm/signup.html" class="btn btn-info" role="button">Login Instead</a>
+</div>
 </body>
 </html>
 <%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

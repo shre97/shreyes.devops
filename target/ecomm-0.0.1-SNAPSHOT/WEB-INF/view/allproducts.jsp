@@ -32,7 +32,7 @@
  
  <div cass"container">
  
- 	search: <input type="text" placeholder="Search Text" ng-model="searchText"  ng-init="searchText='Guitar'" />
+ 	search: <input type="text" placeholder="Search Text" ng-model="searchText"  ng-init="searchText=''" />
  	<h1 style="font-family:forte ;color:red;"> you searched for:{{searchText}}</font></h1>
  	
  	
