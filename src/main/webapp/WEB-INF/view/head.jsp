@@ -37,7 +37,7 @@
           <ul class="dropdown-menu">
             <li><a href="#"></a></li>
             <li><a href="signin"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="loginpage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             <li><a href="addproducts"><span class="glyphicon glyphicon-plus"></span>Add Products</a></li>  
           </ul>
         </li>

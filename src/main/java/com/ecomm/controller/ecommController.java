@@ -40,25 +40,24 @@ public class ecommController {
     { 
 	   return "Products";
     }
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String loginurl1() {
-	   return "login";
-
-	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	
+	@RequestMapping(value = "/loginpage", method = RequestMethod.GET)
 	public String loginurl() {
 	   return "login";
 
 	}
-
-	@RequestMapping(value = "/logincheck", method = RequestMethod.GET)
-	public String logincheck() {
-
+	
+	@RequestMapping(value = "/loginpage", method = RequestMethod.POST)
+	public String loginpage() {
+		
+		System.out.println("In Login POST");
+		
 	   return "login";
 
 	}
 
+	
 @RequestMapping(value = "/signin", method = RequestMethod.GET)
 public ModelAndView signinfo()
 { 

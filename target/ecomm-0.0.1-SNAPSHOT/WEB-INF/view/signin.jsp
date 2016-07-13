@@ -70,7 +70,7 @@
    </div> 
  </div> 
  <div class="container">
-  <a href="http://localhost:8080/ecomm/signup.html" class="btn btn-info" role="button">Login Instead</a>
+  <a href="signup" class="btn btn-info" role="button">Login Instead</a>
 </div>
 </body>
 </html>

@@ -20,7 +20,7 @@ public class User {
 		Id = id;
 	}
 
-	private String Name="";
+	private String name="";
 	
 	public String getCpassword() {
 		return cpassword;
@@ -28,6 +28,14 @@ public class User {
 
 	public void setCpassword(String cpassword) {
 		this.cpassword = cpassword;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	private String password="";
@@ -39,20 +47,15 @@ public class User {
 	@Transient
 	private String cpassword;
 
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
+	
 	
 
 
 public String getPassword() {
 	return password;
 }
+
+
 
 	public void setPassword(String password) {
 		this.password = password;
