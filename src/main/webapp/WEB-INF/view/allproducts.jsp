@@ -24,16 +24,17 @@
  	});
   </script>
 
-<body ng-app="mymodule" background="C:\Users\SHREYES\Pictures\musical_notes_background-t22.jpg">
+<body ng-app="mymodule" background="resources/img/background.jpg">
 </head>
 <body bgcolor="yellow">
 <%@include file="head.jsp" %>
 <div data-ng-controller="mycontroller">
  
  <div cass"container">
- 
+ <h1 align="Center" style="font-family:Callibri ;color:red;">
  	search: <input type="text" placeholder="Search Text" ng-model="searchText"  ng-init="searchText=''" />
- 	<h1 style="font-family:forte ;color:red;"> you searched for:{{searchText}}</font></h1>
+ </h1>
+ 	<h2 align="center" style="font-family:Callibri ;color:red;"> you searched for:{{searchText}}</font></h2>
  	
  	
  	<p>

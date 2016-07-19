@@ -21,6 +21,7 @@ public class ecommController {
 
 	@Autowired
 	ProductServices ps;
+	
 	@Autowired
 	UserServices us;
 	

@@ -26,12 +26,7 @@ public class Product {
 	
 	private int price;
 	
-	@Override
-	public String toString() {
-		return "{productId:\"" + productId +"\", Name:\"" + Name +"\", price:\"" + price +"\", decsription:\""
-				+ decsription + "\", image:\"" + image +"\"}";
-	}
-
+	
 	private String decsription="";
 	
 	private String image="";
@@ -65,9 +60,14 @@ public class Product {
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.Name = name;
 	}
  
 	
+	@Override
+	public String toString() {
+		return "{productId:\"" + productId +"\", Name:\"" + Name +"\", price:\"" + price +"\", decsription:\""
+				+ decsription + "\", image:\"" + image +"\"}";
+	}
 
 }

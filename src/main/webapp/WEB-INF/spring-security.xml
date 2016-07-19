@@ -11,7 +11,7 @@
     
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 	<property name="driverClassName" value="org.h2.Driver"/>
-	<property name="url" value="jdbc:h2:~/musichub;AUTO_SERVER=TRUE"/>
+	<property name="url" value="jdbc:h2:~/ecomm;AUTO_SERVER=TRUE;"/>
 	<property name="username" value="sa"/>
 	<property name="password" value=""/>
 	</bean>
@@ -32,6 +32,26 @@
         
          <security:csrf disabled="true"/>
     </security:http>
+    
+    
+            <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect"> org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="packagesToScan">
+		
+		<list>
+		<value>com.niit.ecomm.model</value>
+		<value>com.niit.ecomm.UserModel</value>
+		<value>com.niit.ecomm.RoleSecurity</value>
+		</list>
+		</property>
+	</bean>	
 
     <security:authentication-manager>
         <security:authentication-provider >

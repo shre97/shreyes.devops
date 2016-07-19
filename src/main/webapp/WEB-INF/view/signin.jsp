@@ -11,67 +11,63 @@
  <link rel="stylesheet" href="resources/css/custom.css"> 
     <title>sign in</title>
     <style>
-.inputForm
-{
-    -moz-border-radius:10px; /* Firefox */
-    -webkit-border-radius: 10px; /* Safari, Chrome */
-    -khtml-border-radius: 10px; /* KHTML */
-    border-radius: 10px; /* CSS3 */
-    behavior:url("border-radius.htc");
+    body {
+    background-image: url("resources/img/bgsignup.jpg");
 }
-
-#RightColumn
-{
-    background-color:White;
+.jumbotron {
+opacity:0.89;
 }
 </style>
 </head>
 <body>
-<%@include file="head.jsp" %>
-<div class="container"> 
-     <div class="row"> 
-         <div class="col-sm-6 col-md-4 col-md-offset-4"> 
-<h1 align="Center" style="font-family:forte ;color:#1A5880;">Signup To Continue</h1>
-<form:form method="POST" action="Userdetails" modelAttribute="User">
-   <table>
-    <tr>
-        <td><form:label  path="name">Name</form:label></td>
-        <td><form:input path="name" /></td>
-    </tr>
-    <tr>
-        <td><form:label path="password">Password</form:label></td>
-        <td><form:input path="password" /></td>
-    </tr>
-    <tr>
-        <td><form:label path="cpassword">confirm Password</form:label></td>
-        <td><form:input path="cpassword" /></td>
-    </tr>
-    <tr>
-        <td><form:label path="contactno">contact number</form:label></td>
-        <td><form:input path="contactno" /></td>
-    </tr>
-    <tr>
-        <td><form:label path="address">address</form:label></td>
-        <td><form:input path="address" /></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <input type="submit" value="Submit"/>
-            <div class="container">
 
-</div>
-        </td>
+<%@include file="head.jsp" %>
+<div class="container">
+
+<div class="row"> 
+         <div class="col-sm-7 col-md-6 col-md-offset-3">
+          
+  <div class="jumbotron"  align="Center" style="font-family:calibri ;color:#1A5880;">
+  <h2 align="Center" style="font-family:Callibri ;color:#1A5880;">Signup TO Continue</h2>
+  <h3>
+
+<form:form method="POST" action="Userdetails" modelAttribute="User">
+ <div class="table-responsive">          
+  <table class="table">
+        <tbody>
+   <tr>
+    <td><form:label  path="name"></form:label>Name</td>
+    <td><form:input path="name" /></td>
+    </tr>
+    <tr>
+    <td>    <form:label path="password">Password</form:label></td>
+    <td>     <form:input path="password" /></td>
     </tr>
     
-</table>  
- 
-</form:form>
-      </div> 
-   </div> 
- </div> 
- <div class="container">
-  <a href="signup" class="btn btn-info" role="button">Login Instead</a>
+  <tr>
+      <td>  <form:label path="cpassword">confirm Password</form:label></td>
+       <td> <form:input path="cpassword" /></td>
+       <tr>
+    
+       <td>  <form:label path="contactno">contact number</form:label></td>
+       <td> <form:input path="contactno" /></td>
+       </tr>
+       <tr>
+       <td> <form:label path="address">address</form:label> </td>
+       <td> <form:input path="address" /></td>
+       </tr>
+        <tr>
+            <td></td>
+       		<td><button type="submit" value="Submit" class="btn btn-primary"><h4><span class="glyphicon glyphicon-ok"> Signup </span></h4></button></td>
+         </tr> 
+         </h3>  
+</tbody>
+</table>
 </div>
+</div>
+</div>
+</form:form>
+
 </body>
 </html>
 <%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
